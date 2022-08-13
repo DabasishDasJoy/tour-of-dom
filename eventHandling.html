@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Handling</title>
+</head>
+<body>
+    <h1>DOM Event hanlder</h1>
+    <h4 id="input-text">Default input text</h4>
+    <input type="text" id="input-fld">
+    <button id="btn-update">Update</button>
+    <h3 id="handle-text">Default Text</h3>
+    <button onclick="handleFunction()">Handle text using function</button>
+    <button id="event-handler-button">Handle text using event listener</button>
+    
+    <script>
+        function handleFunction(){
+            document.getElementById('handle-text').innerText = "Handled using handle Function";
+        }
+
+        document.getElementById('event-handler-button').addEventListener('click', function(){
+            document.getElementById('handle-text').innerText = "Handled using event lister";
+        })
+
+        document.getElementById('btn-update').addEventListener('click', function(){
+            document.getElementById('input-text').innerText = document.getElementById('input-fld').value;
+            document.getElementById('input-fld').value = '';
+        })
+    </script>
+</body>
+</html>
