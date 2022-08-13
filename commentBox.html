@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+</head>
+<body>
+    <h1>Please Add Comments here</h1>
+    <div id="comments">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eum officia iure adipisci quis deleniti corporis reiciendis dolor voluptate doloribus incidunt cum dolores cupiditate earum doloremque, consequatur obcaecati neque omnis? Quod deserunt molestias error, optio ipsum reiciendis at mollitia reprehenderit rerum, laudantium alias incidunt animi aspernatur natus accusamus dolorum corrupti repellat delectus, doloribus repellendus. Perspiciatis, quos ipsam, incidunt repudiandae laboriosam optio, quo aspernatur soluta obcaecati dignissimos quisquam minus animi excepturi amet qui natus saepe veritatis consequuntur! Perferendis soluta, enim cum tenetur fugiat asperiores voluptatibus corporis corrupti suscipit vitae rem, rerum dolorum architecto velit explicabo pariatur. Animi maiores quia eius quasi.</p>
+        <p>Ullam unde eius laudantium animi soluta, doloremque, magnam a modi minus rerum eveniet officiis nemo omnis doloribus ab ut dicta distinctio repellat? Eveniet itaque repudiandae nostrum magnam tempore temporibus cum dolores nam totam est alias in beatae neque laborum vero, ipsa sunt sapiente praesentium voluptates error? Tenetur, modi! Fuga sunt consectetur, sint nesciunt adipisci beatae, numquam temporibus ducimus quas eaque ratione tenetur similique facere excepturi explicabo possimus nisi earum eum ea nam! Iure accusamus quas quidem, praesentium beatae facilis eos possimus quod earum iste sequi sit, totam molestias sint qui consequuntur, eum consectetur? Fugit voluptate odit laboriosam eveniet, explicabo optio?</p>
+        <p>Amet doloribus repudiandae molestias, a dolores maiores? Doloribus, officiis error quod harum at molestias quia repellendus provident illo, vitae id fugiat hic voluptates. Fugit ea mollitia amet nisi id vitae laborum, atque, sed asperiores numquam natus! Magnam ipsam dolores animi pariatur tenetur debitis temporibus. Quo autem similique eaque sunt voluptatum laboriosam temporibus nihil voluptatem pariatur eligendi ullam, repellat, corrupti at vero reiciendis fugit voluptate doloremque perferendis neque? Dignissimos quas, aspernatur animi eius expedita minus placeat enim et, quo debitis est nulla sapiente quibusdam, atque rerum blanditiis repudiandae tempora deleniti obcaecati ipsum eos sed eum. Fuga unde at necessitatibus voluptas recusandae?</p>
+    </div>
+    <div>
+        <textarea name="" id="text-area" cols="60" rows="8"></textarea>
+        <br>
+        <br>
+        <button id="btn-post">Post Comment</button>
+    </div>
+
+    <script>
+        document.getElementById('btn-post').addEventListener('click', function(){
+            const textArea = document.getElementById('text-area');
+            const value = textArea.value;
+            const p = document.createElement('p');
+            p.innerText = value;
+
+            document.getElementById('comments').appendChild(p);
+            textArea.value = '';
+        })
+    </script>
+</body>
+</html>
